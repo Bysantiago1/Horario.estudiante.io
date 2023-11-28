@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIS Horario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #9ACC32;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+        h1 {
+          color: white;
+          text-align: center;
+        }
+        a:hover{
+          color: white;
+        }
+        main {
+            padding: 10px;
+        }
+        }
+
+        h2 {
+            color: #9ACC32;
+            text-align: right;
+        }
+
+        a {
+            color: #9ACC32;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+          font-family: Arial, sans-serif;
+          color: white;
+          width: 100%;
+          margin-top: 10px;
+
+        }
+
+        td, th {
+          background-color: #9ACC32;
+          text-align: left;
+          padding: 8px;
+
+        }
+
+        tr:nth-child(even) {
+          background-color: #9ACC32;
+          border-top:10px;
+          border-bottom: 10px;
+        }
+        .days {
+            width: 50%;
+        }
+        #hide{
+          display: none;
+        }
+        #hide2{
+          display: none;
+        }
+        #hide3{
+          display:none;
+        }
+        #hide4{
+          display:none;
+        }
+        #hide5{
+          display:none;
+        }
+        #hide6{
+          display:none;
+        }
+
+        main {
+          min-height: 100vh;
+          display: flex;
+          margin: auto;
+        }
+        .label{
+
+        }
+        .Beta{
+          color: #9ACC32;
+          text-align: center;
+        }
+        .button {
+          background-color: #04AA6D; /* Green */
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          border-radius: 8px;
+          transition-duration: 0.4s;
+        }
+        .button2 {
+          background-color: #04AA6D; /* Green */
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          border-radius: 8px;
+          transition-duration: 0.4s;
+        }
+
+        .button:hover {
+          background-color: #9ACC32 ; /* Green */
+          color:  white;
+        }
+        .Lunes{
+          display: none;
+        }
+        .Acerca{
+          text-align: center;
+        }
+        #instagramButton {
+            background-color: #405DE6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: left;
+        }
+
+        #instagramButton img {
+            width: 20px;
+            margin-right: 10px;
+        }
+    </style>
+    <script>
+        function mostrarClase() {
+          var dia = document.getElementById('dia').value;
+          var hora = document.getElementById('hora').value;
+          var clase = document.getElementById('clase').value;
+
+          if (dia == 'Lunes'){
+            if (hora == '06:00-07:00'){
+                var parrafo = document.getElementById('l06');
+            }
+            if (hora == '07:00-08:00'){
+                var parrafo = document.getElementById('l07');
+            }
+            if (hora == '08:00-09:00'){
+                var parrafo = document.getElementById('l08');
+            }
+            if (hora == '09:00-10:00'){
+                var parrafo = document.getElementById('l09');
+            }
+            if (hora == '10:00-11:00'){
+                var parrafo = document.getElementById('l10');
+            }
+            if (hora == '11:00-12:00'){
+                var parrafo = document.getElementById('l11');
+            }
+            if (hora == '12:00-13:00'){
+                var parrafo = document.getElementById('l12');
+            }
+            if (hora == '13:00-14:00'){
+                var parrafo = document.getElementById('l13');
+            }
+            if (hora == '14:00-15:00'){
+                var parrafo = document.getElementById('l14');
+            }
+            if (hora == '15:00-16:00'){
+                var parrafo = document.getElementById('l15');
+            }
+            if (hora == '16:00-17:00'){
+                var parrafo = document.getElementById('l16');
+            }
+            if (hora == '17:00-18:00'){
+                var parrafo = document.getElementById('l17');
+            }
+            if (hora == '18:00-19:00'){
+                var parrafo = document.getElementById('l18');
+            }
+            if (hora == '19:00-20:00'){
+                var parrafo = document.getElementById('l19');
+            }
+            parrafo.innerText = hora + " Clase de " + clase;
+
+          }
+          if (dia == 'Martes'){
+            if (hora == '06:00-07:00'){
+                var parrafo = document.getElementById('m06');
+            }
+            if (hora == '07:00-08:00'){
+                var parrafo = document.getElementById('m07');
+            }
+            if (hora == '08:00-09:00'){
+                var parrafo = document.getElementById('m08');
+            }
+            if (hora == '09:00-10:00'){
+                var parrafo = document.getElementById('m09');
+            }
+            if (hora == '10:00-11:00'){
+                var parrafo = document.getElementById('m10');
+            }
+            if (hora == '11:00-12:00'){
+                var parrafo = document.getElementById('m11');
+            }
+            if (hora == '12:00-13:00'){
+                var parrafo = document.getElementById('m12');
+            }
+            if (hora == '13:00-14:00'){
+                var parrafo = document.getElementById('m13');
+            }
+            if (hora == '14:00-15:00'){
+                var parrafo = document.getElementById('m14');
+            }
+            if (hora == '15:00-16:00'){
+                var parrafo = document.getElementById('m15');
+            }
+            if (hora == '16:00-17:00'){
+                var parrafo = document.getElementById('m16');
+            }
+            if (hora == '17:00-18:00'){
+                var parrafo = document.getElementById('m17');
+            }
+            if (hora == '18:00-19:00'){
+                var parrafo = document.getElementById('m18');
+            }
+            if (hora == '19:00-20:00'){
+                var parrafo = document.getElementById('m19');
+            }
+            parrafo.innerText = hora + " Clase de " + clase;
+
+          }
+          if (dia == 'Miercoles'){
+            if (hora == '06:00-07:00'){
+                var parrafo = document.getElementById('w06');
+            }
+            if (hora == '07:00-08:00'){
+                var parrafo = document.getElementById('w07');
+            }
+            if (hora == '08:00-09:00'){
+                var parrafo = document.getElementById('w08');
+            }
+            if (hora == '09:00-10:00'){
+                var parrafo = document.getElementById('w09');
+            }
+            if (hora == '10:00-11:00'){
+                var parrafo = document.getElementById('w10');
+            }
+            if (hora == '11:00-12:00'){
+                var parrafo = document.getElementById('w11');
+            }
+            if (hora == '12:00-13:00'){
+                var parrafo = document.getElementById('w12');
+            }
+            if (hora == '13:00-14:00'){
+                var parrafo = document.getElementById('w13');
+            }
+            if (hora == '14:00-15:00'){
+                var parrafo = document.getElementById('w14');
+            }
+            if (hora == '15:00-16:00'){
+                var parrafo = document.getElementById('w15');
+            }
+            if (hora == '16:00-17:00'){
+                var parrafo = document.getElementById('w16');
+            }
+            if (hora == '17:00-18:00'){
+                var parrafo = document.getElementById('w17');
+            }
+            if (hora == '18:00-19:00'){
+                var parrafo = document.getElementById('w18');
+            }
+            if (hora == '19:00-20:00'){
+                var parrafo = document.getElementById('w19');
+            }
+            parrafo.innerText = hora + " Clase de " + clase;
+
+          }
+          if (dia == 'Jueves'){
+            if (hora == '06:00-07:00'){
+                var parrafo = document.getElementById('j06');
+            }
+            if (hora == '07:00-08:00'){
+                var parrafo = document.getElementById('j07');
+            }
+            if (hora == '08:00-09:00'){
+                var parrafo = document.getElementById('j08');
+            }
+            if (hora == '09:00-10:00'){
+                var parrafo = document.getElementById('j09');
+            }
+            if (hora == '10:00-11:00'){
+                var parrafo = document.getElementById('j10');
+            }
+            if (hora == '11:00-12:00'){
+                var parrafo = document.getElementById('j11');
+            }
+            if (hora == '12:00-13:00'){
+                var parrafo = document.getElementById('j12');
+            }
+            if (hora == '13:00-14:00'){
+                var parrafo = document.getElementById('j13');
+            }
+            if (hora == '14:00-15:00'){
+                var parrafo = document.getElementById('j14');
+            }
+            if (hora == '15:00-16:00'){
+                var parrafo = document.getElementById('j15');
+            }
+            if (hora == '16:00-17:00'){
+                var parrafo = document.getElementById('j16');
+            }
+            if (hora == '17:00-18:00'){
+                var parrafo = document.getElementById('j17');
+            }
+            if (hora == '18:00-19:00'){
+                var parrafo = document.getElementById('j18');
+            }
+            if (hora == '19:00-20:00'){
+                var parrafo = document.getElementById('j19');
+            }
+            parrafo.innerText = hora + " Clase de " + clase;
+
+          }
+          if (dia == 'Viernes'){
+            if (hora == '06:00-07:00'){
+                var parrafo = document.getElementById('v06');
+            }
+            if (hora == '07:00-08:00'){
+                var parrafo = document.getElementById('v07');
+            }
+            if (hora == '08:00-09:00'){
+                var parrafo = document.getElementById('v08');
+            }
+            if (hora == '09:00-10:00'){
+                var parrafo = document.getElementById('v09');
+            }
+            if (hora == '10:00-11:00'){
+                var parrafo = document.getElementById('v10');
+            }
+            if (hora == '11:00-12:00'){
+                var parrafo = document.getElementById('v11');
+            }
+            if (hora == '12:00-13:00'){
+                var parrafo = document.getElementById('v12');
+            }
+            if (hora == '13:00-14:00'){
+                var parrafo = document.getElementById('v13');
+            }
+            if (hora == '14:00-15:00'){
+                var parrafo = document.getElementById('v14');
+            }
+            if (hora == '15:00-16:00'){
+                var parrafo = document.getElementById('v15');
+            }
+            if (hora == '16:00-17:00'){
+                var parrafo = document.getElementById('v16');
+            }
+            if (hora == '17:00-18:00'){
+                var parrafo = document.getElementById('v17');
+            }
+            if (hora == '18:00-19:00'){
+                var parrafo = document.getElementById('v18');
+            }
+            if (hora == '19:00-20:00'){
+                var parrafo = document.getElementById('v19');
+            }
+            parrafo.innerText = hora + " Clase de " + clase;
+
+          }
+          if (dia == 'Sabado'){
+            if (hora == '06:00-07:00'){
+                var parrafo = document.getElementById('s06');
+            }
+            if (hora == '07:00-08:00'){
+                var parrafo = document.getElementById('s07');
+            }
+            if (hora == '08:00-09:00'){
+                var parrafo = document.getElementById('s08');
+            }
+            if (hora == '09:00-10:00'){
+                var parrafo = document.getElementById('s09');
+            }
+            if (hora == '10:00-11:00'){
+                var parrafo = document.getElementById('s10');
+            }
+            if (hora == '11:00-12:00'){
+                var parrafo = document.getElementById('s11');
+            }
+            if (hora == '12:00-13:00'){
+                var parrafo = document.getElementById('s12');
+            }
+            if (hora == '13:00-14:00'){
+                var parrafo = document.getElementById('s13');
+            }
+            if (hora == '14:00-15:00'){
+                var parrafo = document.getElementById('s14');
+            }
+            if (hora == '15:00-16:00'){
+                var parrafo = document.getElementById('s15');
+            }
+            if (hora == '16:00-17:00'){
+                var parrafo = document.getElementById('s16');
+            }
+            if (hora == '17:00-18:00'){
+                var parrafo = document.getElementById('s17');
+            }
+            if (hora == '18:00-19:00'){
+                var parrafo = document.getElementById('s18');
+            }
+            if (hora == '19:00-20:00'){
+                var parrafo = document.getElementById('s19');
+            }
+            parrafo.innerText = hora + " Clase de " + clase;
+
+          }
+
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1> UIS Horario </h1>
+    </header>
+    <h2>Seleccione Clase y Hora</h2>
+
+    <label for="clase" class="label">Clase:</label>
+    <select id="clase">
+      <option></option>
+      <option value="Calculo">Calculo</option>
+      <option value="Fisica">Fisica</option>
+      <option value="Quimica Basica">Quimica Basica</option>
+      <option value="Algebra Lineal">Algebra Lineal</option>
+      <option value="Taller de Lenguaje">Taller de Lenguaje</option>
+      <option value="Catedra UIS">Catedra UIS</option>
+      <option value="Cultura fisica y deportiva">Cultura fisica y deportiva</option>
+      <option value="Fundamentos de Programacion">Fundamentos de Programacion</option>
+    </select>
+
+    <label for="dia" class="label">Día:</label>
+    <select id="dia">
+      <option></option>
+      <option value="Lunes">Lunes</option>
+      <option value="Martes">Martes</option>
+      <option value="Miercoles">Miercoles</option>
+      <option value="Jueves">Jueves</option>
+      <option value="Viernes">Viernes</option>
+      <option value="Sabado">Sabado</option>
+    </select>
+
+    <label for="hora" class="label">Hora:</label>
+    <select id="hora">
+      <option></option>
+      <option value="06:00-07:00">06:00-07:00</option>
+      <option value="07:00-08:00">07:00-08:00</option>
+      <option value="08:00-09:00">08:00-09:00</option>
+      <option value="09:00-10:00">09:00-10:00</option>
+      <option value="10:00-11:00">10:00-11:00</option>
+      <option value="11:00-12:00">11:00-12:00</option>
+      <option value="12:00-13:00">12:00-13:00</option>
+      <option value="13:00-14:00">13:00-14:00</option>
+      <option value="14:00-15:00">14:00-15:00</option>
+      <option value="15:00-16:00">15:00-16:00</option>
+      <option value="16:00-17:00">16:00-17:00</option>
+      <option value="17:00-18:00">17:00-18:00</option>
+      <option value="18:00-19:00">18:00-19:00</option>
+      <option value="19:00-20:00">19:00-20:00</option>
+
+    </select>
+    <button onclick="mostrarClase()">Asignar Clase</button>
+    <table class="tabla">
+        <tr>
+            <th class="days">Lunes
+            <button onclick="mostrar();" class="button">
+            Mostrar
+            </button>
+            </th>
+        </tr>
+    </table>
+    <div id="hide">
+      <p id="l06" class="clase"></p>
+      <p id="l07" class="clase"></p>
+      <p id="l08" class="clase"></p>
+      <p id="l09" class="clase"></p>
+      <p id="l10" class="clase"></p>
+      <p id="l11" class="clase"></p>
+      <p id="l12" class="clase"></p>
+      <p id="l13" class="clase"></p>
+      <p id="l14" class="clase"></p>
+      <p id="l15" class="clase"></p>
+      <p id="l16" class="clase"></p>
+      <p id="l17" class="clase"></p>
+      <p id="l18" class="clase"></p>
+      <p id="l19" class="clase"></p>
+        <bottom onclick="ocultar();" class="button">Cerrar</button>
+    </div>
+    <table>
+        <tr>
+            <th class="days">Martes
+            <button onclick="mostrar2();" class="button">
+            Mostrar
+            </button>
+            </th>
+        </tr>
+    </table>
+    <div id="hide2">
+      <p id="m06" class="clase"></p>
+      <p id="m07" class="clase"></p>
+      <p id="m08" class="clase"></p>
+      <p id="m09" class="clase"></p>
+      <p id="m10" class="clase"></p>
+      <p id="m11" class="clase"></p>
+      <p id="m12" class="clase"></p>
+      <p id="m13" class="clase"></p>
+      <p id="m14" class="clase"></p>
+      <p id="m15" class="clase"></p>
+      <p id="m16" class="clase"></p>
+      <p id="m17" class="clase"></p>
+      <p id="m18" class="clase"></p>
+      <p id="m19" class="clase"></p>
+        <bottom onclick="ocultar2();" class="button">Cerrar</button>
+    </div>
+    <table>
+        <tr>
+            <th class="days">Miércoles
+            <button onclick="mostrar3()" class="button">
+            Mostrar
+            </button>
+            </th>
+        </tr>
+      </table>
+      <div id="hide3">
+        <p id="w06" class="clase"></p>
+        <p id="w07" class="clase"></p>
+        <p id="w08" class="clase"></p>
+        <p id="w09" class="clase"></p>
+        <p id="w10" class="clase"></p>
+        <p id="w11" class="clase"></p>
+        <p id="w12" class="clase"></p>
+        <p id="w13" class="clase"></p>
+        <p id="w14" class="clase"></p>
+        <p id="w15" class="clase"></p>
+        <p id="w16" class="clase"></p>
+        <p id="w17" class="clase"></p>
+        <p id="w18" class="clase"></p>
+        <p id="w19" class="clase"></p>
+          <bottom onclick="ocultar3();" class="button">Cerrar</button>
+      </div>
+      <table>
+        <tr>
+            <th class="days">Jueves
+            <button onclick="mostrar4()" class="button">
+            Mostrar
+            </button>
+            </th>
+        </tr>
+      </table>
+      <div id="hide4">
+        <p id="j06" class="clase"></p>
+        <p id="j07" class="clase"></p>
+        <p id="j08" class="clase"></p>
+        <p id="j09" class="clase"></p>
+        <p id="j10" class="clase"></p>
+        <p id="j11" class="clase"></p>
+        <p id="j12" class="clase"></p>
+        <p id="j13" class="clase"></p>
+        <p id="j14" class="clase"></p>
+        <p id="j15" class="clase"></p>
+        <p id="j16" class="clase"></p>
+        <p id="j17" class="clase"></p>
+        <p id="j18" class="clase"></p>
+        <p id="j19" class="clase"></p>
+          <bottom onclick="ocultar4();" class="button">Cerrar</button>
+      </div>
+      <table>
+        <tr>
+            <th class="days">Viernes
+            <button onclick="mostrar5()" class="button">
+            Mostrar
+            </button>
+            </th>
+          </tr>
+      </table>
+      <table>
+      <div id="hide5">
+        <p id="v06" class="clase"></p>
+        <p id="v07" class="clase"></p>
+        <p id="v08" class="clase"></p>
+        <p id="v09" class="clase"></p>
+        <p id="v10" class="clase"></p>
+        <p id="v11" class="clase"></p>
+        <p id="v12" class="clase"></p>
+        <p id="v13" class="clase"></p>
+        <p id="v14" class="clase"></p>
+        <p id="v15" class="clase"></p>
+        <p id="v16" class="clase"></p>
+        <p id="v17" class="clase"></p>
+        <p id="v18" class="clase"></p>
+        <p id="v19" class="clase"></p>
+          <bottom onclick="ocultar5();" class="button">Cerrar</button>
+      </div>
+          <tr>
+            <th class="days">Sábado
+            <button onclick="mostrar6()" class="button">
+            Mostrar
+            </button>
+            </th>
+          </tr>
+      </table>
+      <div id="hide6">
+        <p id="s06" class="clase"></p>
+        <p id="s07" class="clase"></p>
+        <p id="s08" class="clase"></p>
+        <p id="s09" class="clase"></p>
+        <p id="s10" class="clase"></p>
+        <p id="s11" class="clase"></p>
+        <p id="s12" class="clase"></p>
+        <p id="s13" class="clase"></p>
+        <p id="s14" class="clase"></p>
+        <p id="s15" class="clase"></p>
+        <p id="s16" class="clase"></p>
+        <p id="s17" class="clase"></p>
+        <p id="s18" class="clase"></p>
+        <p id="s19" class="clase"></p>
+          <bottom onclick="ocultar6();" class="button">Cerrar</button>
+      </div>
+
+    <div id="hours" style="display:none;"></div>
+
+    <script>
+
+
+   function mostrar(){
+
+     document.getElementById('hide').style.display='block';
+
+    }
+    function ocultar(){
+
+      document.getElementById('hide').style.display='none';
+    }
+    function mostrar2(){
+
+      document.getElementById('hide2').style.display='block';
+
+     }
+     function ocultar2(){
+
+       document.getElementById('hide2').style.display='none';
+     }
+     function mostrar3(){
+
+       document.getElementById('hide3').style.display='block';
+
+      }
+      function ocultar3(){
+
+        document.getElementById('hide3').style.display='none';
+      }
+      function mostrar4(){
+
+        document.getElementById('hide4').style.display='block';
+
+       }
+       function ocultar4(){
+
+         document.getElementById('hide4').style.display='none';
+       }
+       function mostrar5(){
+
+         document.getElementById('hide5').style.display='block';
+
+        }
+        function ocultar5(){
+
+          document.getElementById('hide5').style.display='none';
+        }
+        function mostrar6(){
+
+          document.getElementById('hide6').style.display='block';
+
+         }
+         function ocultar6(){
+
+           document.getElementById('hide6').style.display='none';
+         }
+
+
+
+
+
+
+    </script>
+
+    <h2 class="Beta">Beta V3</h2>
+    <h2 class="Acerca">Acerca de mi</h2>
+    <p class="Acerca">Estudiante de ingenieria de sistemas en la Universidad Industrial de Santander</p>
+    <a id="instagramButton" href="https://www.instagram.com/santig.pinilla/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" alt="Instagram Logo">
+    </a>
+
+</body>
+</html>
